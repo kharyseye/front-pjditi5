@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'projet-diti5';
+actions : Array<any> = [
+  {title:"Articles","route": "/articles", icon:"arrow-down-up"},
+  {title:"NewArticle","route": "/newArticle", icon:"plus-circle"}
+];
+currentAction: any ;
+
+setCurrentAction(action:any){
+  this.currentAction = action;
+}
+
+
 }
